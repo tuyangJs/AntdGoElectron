@@ -1,0 +1,133 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+  user-select: none;
+  text-rendering: optimizeLegibility;
+}
+
+.dragger {
+  width: 100%;
+  display: block;
+
+  div>span {
+    padding: 2px !important;
+  }
+}
+
+@font-face {
+  font-family: "DouYuFont_2";
+  src: url('@/typeface/DouYu.ttf');
+}
+
+@font-face {
+  font-family: "HarmonyOS_Sans";
+  src: url('@/typeface/HarmonyOS_Sans_Regular.ttf');
+}
+
+@font-face {
+  font-family: "STHeiti_IOS8";
+  src: url('@/typeface/STHeiti_IOS8.ttc');
+}
+
+@font-face {
+  font-family: "MiSans-Regular";
+  src: url('@/typeface/MiSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: "MiSansLatin-Regular";
+  src: url('@/typeface/MiSansLatin-Regular.ttf');
+}
+
+.RightOutlinedTX {
+  margin-inline: 5px;
+  animation: rotate-ani 1.8s infinite;
+  animation-iteration-count: 2;
+}
+
+.ant-pro-layout .ant-pro-sider-logo>a>h1 {
+  font-family: DouYuFont_2;
+}
+
+@keyframes rotate-ani {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.ant-pro-page-container-children-container {
+  padding: 0px;
+
+}
+
+.ant-pro-sider-collapsed-button {
+  inset-block-start: 80px
+}
+
+.ant-pro-sider-logo {
+  a {
+    img {
+      height: 28px;
+    }
+  }
+}
+
+li.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {}
+
+li.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child::after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 16px;
+  width: 3px;
+  background: var(--ant-menu-item-selected-color);
+  position: absolute;
+  border-radius: 6px;
+  top: 12px;
+  left: 0
+}
+
+.pagBody {
+  height: calc(100vh - 48px);
+  padding-inline: 20px;
+  padding-block: 20px;
+  width: -webkit-fill-available;
+  overflow: auto;
+  border-radius: 12px 0 0 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.ant-layout-sider-children {
+  margin-inline-end: 0px;
+  border-inline-end: 0px !important;
+  padding-block: 4px !important;
+}
+
+.mainBut {
+  height: 100%;
+  width: 150px;
+}
+
+.hmsg {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ant-page-header.ant-page-header-ghost,
+.drag,
+.ant-layout-sider {
+  -webkit-app-region: drag;
+}
+
+.no-drag,
+.ant-menu-item,
+.ant-pro-sider-actions,
+.ant-pro-sider-collapsed-button.ant-pro-sider-collapsed-button-collapsed {
+  -webkit-app-region: no-drag;
+}

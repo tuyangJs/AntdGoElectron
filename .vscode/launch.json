@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "调试项目",
+      "configurations": [
+        "启动项目"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "启动项目",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/DeBugger.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+
+.menu.back input {
+    display: none;
+}
+.menu.back label {
+    display: block;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+
+}
+.menu.back{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+}
+.menu.back circle {
+    fill: #fff3;
+    opacity: 0;
+}
+.menu.back svg {
+    transform: scale(1.3);
+}
+.menu.back label:hover circle {
+    opacity: 1;
+}
+
+.menu--3 label,
+.menu--4 label {
+    top: 0;
+}
+
+.menu--2 label,
+.menu--4 label {
+    left: 0;
+}
+
+.menu.back path {
+    fill: none;
+    stroke: var(--ant-color-text-heading);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    --length: 24;
+    --offset: -38;
+    stroke-dasharray: var(--length) var(--total-length);
+    stroke-dashoffset: var(--offset);
+    transition: all .8s cubic-bezier(.645, .045, .355, 1);
+}
+
+
+
+.cross input:checked+svg .line--1,
+.cross input:checked+svg .line--3 {
+    --length: 22.627416998;
+}
+
+.cross input:checked+svg .line--2 {
+    --length: 0;
+}
+
+.back input:checked+svg .line--1,
+.back input:checked+svg .line--3 {
+    --length: 8.602325267;
+}
+
+.menu--4 .line--1,
+.menu--4 .line--3 {
+    --total-length: 103.35061645507812;
+    --offset: -42.35061645507812;
+}
+
+.menu--4 .line--2 {
+    --total-length: 99;
+}
+
+.menu--4 input:checked+svg path {
+    transform: translateX(31px);
+}
+
+.menu--4 input:checked+svg .line--1,
+.menu--4 input:checked+svg .line--3 {
+    --offset: -8.602325267;
+}
+
+.menu--4 input:checked+svg .line--2 {
+    --offset: -7;
+}
